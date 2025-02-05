@@ -21,7 +21,7 @@ const ResumeNew: React.FC = () => {
 
           <div className="w-full h-[800px] bg-white rounded-lg shadow-lg overflow-hidden">
             <iframe
-              src="/kb_s_evolving_cv.pdf"
+              src="/kabir_lamin_resume.pdf"
               className="w-full h-full"
               title="Resume PDF"
             />
