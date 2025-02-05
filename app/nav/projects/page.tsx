@@ -2,14 +2,11 @@
 import React from 'react';
 import ProjectCard from "./ProjectCard";
 
-// Import images
-// Note: In Next.js, we need to import images as static imports for Image component
+
 import chatify from "@/public/chatify.png";
 import bitsOfCode from "@/public/blog.png";
 import editor from "@/public/codeEditor.png";
 import leaf from "@/public/leaf.png";
-import suicide from "@/public/suicide.png";
-import emotion from "@/public/emotion.png";
 
 export default function Projects() {
   return (
@@ -21,7 +18,7 @@ export default function Projects() {
         </h1>
         
         <p className="mb-12 text-center text-gray-600">
-          Here are a few projects I've worked on recently.
+          Here are a few projects I&apos;ve worked on recently.
         </p>
         
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">

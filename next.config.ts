@@ -8,6 +8,8 @@ const nextConfig: NextConfig = {
       config.resolve.fallback = {
         ...config.resolve.fallback,
         fs: false,
+        canvas: false,
+        encoding: false,
       };
     }
 
