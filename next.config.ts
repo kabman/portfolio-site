@@ -10,6 +10,21 @@ const nextConfig: NextConfig = {
         fs: false,
         canvas: false,
         encoding: false,
+        path: false,
+        stream: false,
+      };
+    }
+
+    if (!isServer) {
+      config.module = {
+        ...config.module,
+        rules: [
+          ...(config.module?.rules || []),
+          {
+            test: /node-canvas/,
+            use: 'null-loader',
+          },
+        ],
       };
     }
 

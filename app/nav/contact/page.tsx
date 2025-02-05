@@ -2,22 +2,24 @@
 import { useState } from 'react';
 import emailjs from '@emailjs/browser';
 
-export default function Page() {
-  const [status, setStatus] = useState('idle');
+type StatusType = 'idle' | 'sending' | 'success' | 'error';
 
-  const handleSubmit = (e) => {
+export default function Page() {
+  const [status, setStatus] = useState<StatusType>('idle');
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setStatus('sending');
 
     emailjs.sendForm(
       'service_tq2cpxa', // Get this from EmailJS dashboard
       'template_k2ru3qm', // Get this from EmailJS dashboard
-      e.target,
+      e.currentTarget,
       'osGAwzduY4gSHehGa' // Get this from EmailJS dashboard
     )
       .then(() => {
         setStatus('success');
-        e.target.reset();
+        e.currentTarget.reset();
       })
       .catch((error) => {
         console.error('Error:', error);

@@ -87,7 +87,12 @@ const Home = () => {
   );
 };
 
-const SocialLink = ({ href, icon }) => {
+interface SocialLinkProps {
+  href: string;
+  icon: React.ReactNode;
+}
+
+const SocialLink: React.FC<SocialLinkProps> = ({ href, icon }) => {
   return (
     <a
       href={href}
